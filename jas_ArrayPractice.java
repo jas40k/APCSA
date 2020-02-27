@@ -139,7 +139,32 @@ public class jas_ArrayPractice
          
          median = (double)(n[n.length/2] + n[n.length/2 + 1])/2;
       }
+      
+     
       System.out.println(mean);
       System.out.println(median);
+   }
+   public static modeArray(int[] n)
+   {
+      int mVal = 0;
+      int mCount = 0;
+         for(int i = 0; j < number.length; i++)
+         {
+            int count = 0;
+            for (int j =0; j < numbers.length; j++)
+            {
+               if(numbers[j]==numbers[i])
+                    count++;
+            }
+            if (count > mCount)
+            {
+               mCount = count;
+               mVal = numbers[i];
+            }
+         }
+            if(mCount>1)
+              System.out.println("The mode is " + mVal);
+            else if (mCount <=1)
+                  System.out.println("There is no mode");
    }
 }
