@@ -1,0 +1,21 @@
+public boolean isPalindrome(String[] s)
+{
+    int rlen = s.length - 1;
+    int tcount = 0;
+    if (s.length == 0 || s.length == 1)
+        return true;
+    
+        for (int i = 0; i < s.length/2; i++)
+        {
+                if (s[i].equals(s[rlen - i]))
+                {
+                    tcount++;
+                    if(tcount == s.length/2)
+                        return true;
+                }
+                else
+                    return false;
+                    
+        }
+    return false;
+}
