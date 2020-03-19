@@ -1,0 +1,44 @@
+public void evenBeforeOdd(int[] a)
+{
+    int evencount = 0;
+    int oddcount = 0;
+    for (int i = 0; i < a.length; i++)
+    {
+        if(a[i]%2==0)
+            evencount++;
+        else
+            oddcount++;
+    }
+    int[] evenarray = new int[evencount];
+    int[] oddarray = new int[oddcount];
+    int nce = 0;
+    for (int i = 0; i < a.length; i++)
+    {
+        if (a[i]%2 == 0)
+        {
+            evenarray[nce] = a[i];
+            nce++;
+        }
+    }
+    int nco = 0;
+        for (int i = 0; i < a.length; i++)
+    {
+
+        if (a[i]%2 != 0)
+        {
+            oddarray[nco] = a[i];
+            nco++;
+        }
+    }
+    
+    for (int i = 0; i < evenarray.length; i++)
+    {
+        a[i] = evenarray[i];
+    }
+    int nnco = 0;
+    for (int i = evenarray.length; i < a.length;i++)
+    {
+        a[i] = oddarray[nnco];
+        nnco++;
+    }
+}
